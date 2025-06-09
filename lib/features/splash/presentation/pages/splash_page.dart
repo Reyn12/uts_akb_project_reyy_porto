@@ -74,7 +74,8 @@ class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
             const SizedBox(height: 30),
             // Nama aplikasi
             const Text(
-              'Reyy Portfolio',
+              'M RENALDI MAULANA',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
@@ -85,6 +86,7 @@ class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
             // Tagline
             const Text(
               'Tugas UTS AKB',
+              textAlign: TextAlign.center,
               style: TextStyle(fontSize: 24, color: Colors.white70),
             ),
           ],

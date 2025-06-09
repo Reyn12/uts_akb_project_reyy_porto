@@ -2,6 +2,7 @@ import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:uts_akb_project_reyy_portfo/features/daily/presentation/pages/daily_page.dart';
+import 'package:uts_akb_project_reyy_portfo/features/home/presentation/binding/home_binding.dart';
 import 'package:uts_akb_project_reyy_portfo/features/home/presentation/pages/home_page.dart';
 import 'package:uts_akb_project_reyy_portfo/features/interest/presentation/pages/interest_page.dart';
 import 'package:uts_akb_project_reyy_portfo/features/profile/presentation/pages/profile_page.dart';
@@ -15,12 +16,15 @@ class MainPage extends StatelessWidget {
     // Inisialisasi controller
     final MainController controller = Get.put(MainController());
 
+    // Inisialisasi binding
+    HomeBinding().dependencies();
+
     // Daftar halaman yang akan ditampilkan
     final List<Widget> pages = [
-      const HomePage(),
-      const DailyPage(),
-      const InterestPage(),
-      const ProfilePage(),
+      HomePage(),
+      DailyPage(),
+      InterestPage(),
+      ProfilePage(),
     ];
 
     return Scaffold(
@@ -30,7 +34,7 @@ class MainPage extends StatelessWidget {
       // Convex Bottom Bar
       bottomNavigationBar: ConvexAppBar(
         style: TabStyle.react,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.blue[900],
         height: 60,
         color: Colors.white60,
         activeColor: Colors.white,
