@@ -1,0 +1,23 @@
+name: uts_akb_project_reyy_portfo
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  dartz: ^0.10.1
+  flutter:
+    sdk: flutter
+  get: ^4.7.2
+  hive: ^2.2.3
+  http: ^1.4.0
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
