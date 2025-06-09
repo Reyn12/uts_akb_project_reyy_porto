@@ -11,7 +11,7 @@ class Header extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       width: double.infinity,
-      padding: EdgeInsets.only(top: 80, bottom: 20),
+      padding: EdgeInsets.only(top: 20, bottom: 20),
       decoration: BoxDecoration(
         color: Colors.blue[900],
         borderRadius: BorderRadius.only(

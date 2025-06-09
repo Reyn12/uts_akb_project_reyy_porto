@@ -28,17 +28,17 @@ class HomeRepositoryImpl implements HomeRepository {
     return Right([
       FriendEntity(
         name: 'M Rizky',
-        profilePictureUrl: 'assets/images/rizky.jpg',
+        profilePictureUrl: 'assets/images/rizky.jpeg',
         isOnline: true,
       ),
       FriendEntity(
         name: 'Hilmi Firdaus',
-        profilePictureUrl: 'assets/images/hilmy.jpg',
+        profilePictureUrl: 'assets/images/hilmy.jpeg',
         isOnline: true,
       ),
       FriendEntity(
         name: 'Bambang Yohanes',
-        profilePictureUrl: 'assets/images/bambang.jpg',
+        profilePictureUrl: 'assets/images/bambang.jpeg',
         isOnline: true,
       ),
     ]);
