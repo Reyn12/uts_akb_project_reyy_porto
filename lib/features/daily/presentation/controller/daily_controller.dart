@@ -24,7 +24,11 @@ class DailyController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    fetchData();
+    isLoading.value = true;
+    Future.delayed(Duration(seconds: 1), () async {
+      await fetchData();
+      isLoading.value = false;
+    });
   }
 
   // Method untuk mengambil data gallery dan music

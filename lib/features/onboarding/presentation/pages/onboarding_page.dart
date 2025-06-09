@@ -104,7 +104,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           shape: BoxShape.circle,
                           color:
                               _currentPage == index
-                                  ? Colors.blue
+                                  ? Colors.blue[900]
                                   : Colors.grey.shade300,
                         ),
                       ),
@@ -115,7 +115,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   ElevatedButton(
                     onPressed: _goToNextPage,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
+                      backgroundColor: Colors.blue[900],
                       padding: const EdgeInsets.symmetric(
                         horizontal: 50,
                         vertical: 15,

@@ -4,10 +4,14 @@ import 'package:uts_akb_project_reyy_portfo/features/daily/domain/entities/galle
 import 'package:uts_akb_project_reyy_portfo/features/daily/presentation/controller/daily_controller.dart';
 import 'package:uts_akb_project_reyy_portfo/features/daily/presentation/widgets/gallery_widget.dart';
 import 'package:uts_akb_project_reyy_portfo/features/daily/presentation/widgets/music_widget.dart';
+import 'package:uts_akb_project_reyy_portfo/features/daily/presentation/widgets/skeleton/gallery_skeleton.dart';
+import 'package:uts_akb_project_reyy_portfo/features/daily/presentation/widgets/skeleton/music_skeleton.dart';
+import 'package:uts_akb_project_reyy_portfo/features/daily/presentation/widgets/skeleton/today_schedule_skeleton.dart';
 import 'package:uts_akb_project_reyy_portfo/features/daily/presentation/widgets/today_schedule_widget.dart';
 import 'package:uts_akb_project_reyy_portfo/features/home/presentation/controller/home_controller.dart'
     as home;
 import 'package:uts_akb_project_reyy_portfo/features/home/presentation/widgets/friends_online_widget.dart';
+import 'package:uts_akb_project_reyy_portfo/features/home/presentation/widgets/skeleton/friends_online_skeleton.dart';
 
 class DailyPage extends StatelessWidget {
   const DailyPage({super.key});
@@ -53,7 +57,16 @@ class DailyPage extends StatelessWidget {
       ),
       body: Obx(() {
         if (homeController.isLoading.value || dailyController.isLoading.value) {
-          return const Center(child: CircularProgressIndicator());
+          return SingleChildScrollView(
+            child: Column(
+              children: [
+                GallerySkeleton(),
+                MusicSkeleton(),
+                TodayScheduleSkeleton(),
+                FriendsOnlineSkeleton(),
+              ],
+            ),
+          );
         }
 
         return SingleChildScrollView(

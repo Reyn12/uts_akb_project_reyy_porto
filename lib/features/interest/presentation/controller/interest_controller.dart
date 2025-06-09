@@ -33,7 +33,11 @@ class InterestController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    fetchAllData();
+    isLoading.value = true;
+    Future.delayed(Duration(seconds: 1), () async {
+      await fetchAllData();
+      isLoading.value = false;
+    });
   }
 
   Future<void> fetchAllData() async {
