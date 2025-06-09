@@ -12,7 +12,36 @@ Aplikasi ini adalah portfolio pribadi yang menampilkan informasi tentang diriku,
 - **Interest**: Menampilkan hal-hal yang disukai dan tidak disukai
 - **Profile**: Informasi detail tentang profil pribadi
 
-Aplikasi ini dibangun menggunakan arsitektur Clean Architecture dengan pembagian layer domain, data, dan presentation.
+## Teknologi yang Digunakan
+
+Aplikasi ini dibangun menggunakan:
+
+- **Clean Architecture**: Menggunakan pembagian layer domain, data, dan presentation untuk memisahkan tanggung jawab dan memudahkan pengujian
+  - **Domain Layer**: Berisi entities, use cases, dan repository interfaces
+  - **Data Layer**: Berisi implementasi repository dan data sources
+  - **Presentation Layer**: Berisi UI, controllers, dan state management
+
+- **GetX**: Sebagai state management, navigation, dan dependency injection yang ringan dan mudah digunakan
+
+- **Hive**: Sebagai pengganti Room di Android native, digunakan untuk local storage yang cepat dan efisien
+
+- **GetIt**: Sebagai pengganti Hilt di Android native, digunakan untuk dependency injection
+
+## Dependencies Utama
+
+```yaml
+dependencies:
+  convex_bottom_bar: ^3.2.0
+  dartz: ^0.10.1
+  flutter:
+    sdk: flutter
+  font_awesome_flutter: ^10.8.0
+  get: ^4.7.2
+  hive: ^2.2.3
+  http: ^1.4.0
+  lottie: ^3.0.0
+  url_launcher: ^6.3.1
+```
 
 ## Screenshot Aplikasi
 
