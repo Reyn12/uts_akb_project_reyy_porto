@@ -26,3 +26,6 @@ flutter:
   assets:
     - assets/lotties/
     - assets/images/
+    - assets/images/gallery/
+    - assets/images/music/
+

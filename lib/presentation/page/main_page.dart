@@ -1,6 +1,7 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:uts_akb_project_reyy_portfo/features/daily/presentation/binding/daily_binding.dart';
 import 'package:uts_akb_project_reyy_portfo/features/daily/presentation/pages/daily_page.dart';
 import 'package:uts_akb_project_reyy_portfo/features/home/presentation/binding/home_binding.dart';
 import 'package:uts_akb_project_reyy_portfo/features/home/presentation/pages/home_page.dart';
@@ -18,6 +19,8 @@ class MainPage extends StatelessWidget {
 
     // Inisialisasi binding
     HomeBinding().dependencies();
+
+    DailyBinding().dependencies();
 
     // Daftar halaman yang akan ditampilkan
     final List<Widget> pages = [
