@@ -7,6 +7,7 @@ import 'package:uts_akb_project_reyy_portfo/features/home/presentation/binding/h
 import 'package:uts_akb_project_reyy_portfo/features/home/presentation/pages/home_page.dart';
 import 'package:uts_akb_project_reyy_portfo/features/interest/presentation/binding/interest_binding.dart';
 import 'package:uts_akb_project_reyy_portfo/features/interest/presentation/pages/interest_page.dart';
+import 'package:uts_akb_project_reyy_portfo/features/profile/presentation/binding/profile_binding.dart';
 import 'package:uts_akb_project_reyy_portfo/features/profile/presentation/pages/profile_page.dart';
 import 'package:uts_akb_project_reyy_portfo/presentation/controller/main_controller.dart';
 
@@ -24,6 +25,8 @@ class MainPage extends StatelessWidget {
     DailyBinding().dependencies();
 
     InterestBinding().dependencies();
+
+    ProfileBinding().dependencies();
 
     // Daftar halaman yang akan ditampilkan
     final List<Widget> pages = [
