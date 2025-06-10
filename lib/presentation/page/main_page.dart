@@ -21,11 +21,8 @@ class MainPage extends StatelessWidget {
 
     // Inisialisasi binding
     HomeBinding().dependencies();
-
     DailyBinding().dependencies();
-
     InterestBinding().dependencies();
-
     ProfileBinding().dependencies();
 
     // Daftar halaman yang akan ditampilkan

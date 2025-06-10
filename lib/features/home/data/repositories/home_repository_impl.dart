@@ -1,25 +1,28 @@
 import 'package:dartz/dartz.dart';
+import 'package:uts_akb_project_reyy_portfo/core/error/exception.dart';
+import 'package:uts_akb_project_reyy_portfo/features/home/data/datasources/user_profile_remote_ds.dart';
 import 'package:uts_akb_project_reyy_portfo/features/home/domain/entities/user_profile_entity.dart';
 import 'package:uts_akb_project_reyy_portfo/features/home/domain/entities/friend_entity.dart';
 import 'package:uts_akb_project_reyy_portfo/features/home/domain/entities/activity_entity.dart';
 import 'package:uts_akb_project_reyy_portfo/features/home/domain/repositories/home_repository.dart';
 
 class HomeRepositoryImpl implements HomeRepository {
+  final UserProfileRemoteDataSource userProfileRemoteDataSource;
+
+  HomeRepositoryImpl({required this.userProfileRemoteDataSource});
+
   @override
   Future<Either<String, UserProfileEntity>> getUserProfile() async {
-    // Data dummy
-    return Right(
-      UserProfileEntity(
-        name: 'Muhammad Renaldi',
-        role: 'Mobile Developer & Tech Enthusiast',
-        rating: 5.0,
-        projects: 24,
-        friends: 156,
-        photos: 89,
-        profilePictureUrl: 'assets/images/reyy.jpg',
-        isOnline: true,
-      ),
-    );
+    try {
+      final result = await userProfileRemoteDataSource.getUserProfile();
+      return Right(
+        result,
+      ); // UserProfileModel otomatis di-cast ke UserProfileEntity
+    } on ServerException catch (e) {
+      return Left(e.message);
+    } catch (e) {
+      return Left('Terjadi kesalahan yang tidak terduga');
+    }
   }
 
   @override
